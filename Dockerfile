@@ -35,3 +35,4 @@ WORKDIR /usr/local/bin/kourami-${kourami_version}
 RUN mvn install
 RUN scripts/download_panel.sh
 RUN ln -s /usr/local/bin/kourami-${kourami_version}/target/Kourami.jar /usr/local/bin/Kourami.jar
+WORKDIR /usr/local/bin
