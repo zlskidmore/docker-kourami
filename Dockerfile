@@ -33,6 +33,6 @@ RUN curl -SL https://github.com/Kingsford-Group/kourami/archive/v${kourami_versi
 RUN tar -xzvf v${kourami_version}.tar.gz
 WORKDIR /usr/local/bin/kourami-${kourami_version}
 RUN mvn install
-RUN scripts/download_panel.sh
+RUN bash /usr/local/bin/kourami-${kourami_version}/scripts/download_panel.sh
 RUN ln -s /usr/local/bin/kourami-${kourami_version}/target/Kourami.jar /usr/local/bin/Kourami.jar
 WORKDIR /usr/local/bin
